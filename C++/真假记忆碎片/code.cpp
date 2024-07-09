@@ -42,3 +42,14 @@ bool check()
     }
     return true;
 }
+
+int main()
+{
+    for (int i = 0; i < 9; i++)
+        cin >> getin[i];
+    if (check())
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
+    return 0;
+}
