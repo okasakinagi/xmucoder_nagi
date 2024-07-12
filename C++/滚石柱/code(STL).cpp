@@ -1,3 +1,4 @@
+// 采用C++STL模板，易理解，消耗时间为Array版的十倍，内存为三分之一，无法ACxmuoj
 #include <iostream>
 #include <string>
 #include <cstring>
