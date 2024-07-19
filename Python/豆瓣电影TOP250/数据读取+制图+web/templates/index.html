@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>作业：豆瓣电影TOP250</title>
+</head>
+
+<body>
+    <div>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                margin: 0;
+            }
+            
+            #nav-1 {
+                border: 0 none;
+            }
+            
+            #ipy8b {
+                margin: 0px 0px 0px 0px;
+                text-align: center;
+            }
+            
+            #nav-1 {
+                padding-top: 30px;
+                padding-right: 0px;
+                padding-bottom: 30px;
+                padding-left: 0px;
+                width: 100%;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgba(0, 0, 0, 0.1);
+                position: relative;
+            }
+            
+            #nav-1 .header-inner {
+                width: 100%;
+            }
+            
+            #nav-1 .header-inner::after {
+                content: " ";
+                height: 0px;
+                display: block;
+                visibility: hidden;
+                clear: both;
+            }
+            
+            #nav-1 h1 {
+                float: left;
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                font-weight: 900;
+                font-size: 28px;
+                margin-bottom: 0px;
+                text-transform: uppercase;
+                font-family: Roboto, Arial, sans-serif;
+            }
+            
+            #nav-1>a {
+                display: inline-block;
+                width: 138px;
+                height: 22px;
+            }
+            
+            #nav-1 img {
+                height: 22px;
+                width: auto;
+            }
+            
+            #nav-1 nav {
+                float: right;
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+            }
+            
+            #nav-1 nav ul {
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+            }
+            
+            #nav-1 nav ul li {
+                padding-top: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                margin-top: 0px;
+                margin-right: 6px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                list-style-position: initial;
+                list-style-image: initial;
+                list-style-type: none;
+                display: inline-block;
+                zoom: 1;
+            }
+            
+            #nav-1 nav ul li a {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 16px;
+                padding-top: 6px;
+                padding-right: 14px;
+                padding-bottom: 6px;
+                padding-left: 14px;
+                position: relative;
+                transition-behavior: normal;
+                transition-duration: 0.2s;
+                transition-timing-function: ease;
+                transition-delay: 0s;
+                transition-property: all;
+            }
+            
+            #nav-1 nav ul li a:hover {
+                text-decoration-line: none;
+                text-decoration-thickness: initial;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+            }
+            
+            #nav-1 nav ul li a.active,
+            #nav-1 nav ul li a:focus {
+                outline-color: initial;
+                outline-style: none;
+                outline-width: initial;
+                text-decoration-line: none;
+                text-decoration-thickness: initial;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                color: white;
+                background-image: initial;
+                background-position-x: initial;
+                background-position-y: initial;
+                background-size: initial;
+                background-repeat: initial;
+                background-attachment: initial;
+                background-origin: initial;
+                background-clip: initial;
+                background-color: rgb(31, 181, 123);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            
+            .c6811 {
+                padding: 10px 10px 10px 10px;
+                font-weight: 500;
+                line-height: 120%;
+                text-align: left;
+                font-size: 20px;
+                color: #000000;
+                border: 0px none;
+            }
+            
+            .fdb-block {
+                font-family: Roboto, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizelegibility;
+                padding-top: 40px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                color: rgb(68, 68, 68);
+                position: relative;
+                background-size: cover;
+                background-position-x: center;
+                background-position-y: center;
+                background-color: rgb(255, 255, 255);
+                margin: 0px 0px 0px 0px;
+                height: 600px;
+            }
+            
+            .text-center {
+                text-align: center;
+            }
+            
+            .fdb-block .text-h1,
+            .fdb-block h1 {
+                font-size: 1.75rem;
+                margin-bottom: 0.5em;
+                margin-top: 0.3em;
+                font-weight: 400;
+            }
+            
+            .fdb-block .col-fill-left {
+                width: 50%;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                background-size: cover;
+                background-position-x: center;
+                background-position-y: center;
+                z-index: 1;
+            }
+            
+            a {
+                color: rgb(0, 123, 255);
+                text-decoration-line: none;
+                text-decoration-thickness: initial;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+                background-color: transparent;
+            }
+            
+            a:hover {
+                color: rgb(0, 86, 179);
+                text-decoration-line: underline;
+                text-decoration-thickness: initial;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+            }
+            
+            .col-12.col-md-5.text-center {
+                padding: 52px 0px 0px 0px;
+            }
+            
+            .footer-1 {
+                margin-top: 60px;
+            }
+            
+            .footer-1 .media-container-row {
+                padding-top: 10px;
+                padding-right: 0px;
+                padding-bottom: 10px;
+                padding-left: 0px;
+                width: 100%;
+                color: rgb(122, 122, 122);
+            }
+            
+            .footer-1 a {
+                color: rgb(255, 255, 255);
+                text-decoration-line: none;
+                text-decoration-thickness: initial;
+                text-decoration-style: initial;
+                text-decoration-color: initial;
+            }
+            
+            p {
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+            }
+            
+            .align-center {
+                text-align: center;
+            }
+            
+            .footer-1 .mbr-text {
+                font-size: 14px;
+                font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+            }
+            
+            .c8796 {
+                font-weight: 500;
+                font-size: 16px;
+                padding: 0px 0px 0px 0px;
+                bottom: 0px;
+            }
+            
+            .c9343 {
+                padding: 10px;
+            }
+            
+            .c10142 {
+                color: black;
+                height: 480px;
+                padding: 0px 0px 0px 0px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <header id="nav-1" role="banner">
+            <div class="container"></div>
+            <div id="i8e7w" class="c6811">豆瓣电影评分前250部制片国家和地区以及电影名索引</div>
+        </header>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <section data-block-type="contents" data-id="3" draggable="true" class="fdb-block">
+            <div class="container">
+                <div style="text-align: center; width: 1450px;" class="row justify-content-end"><img src="data:image/png;base64,{{ graph }}" class="c10142" width="700" height="640" />
+                </div>
+                <form>
+                    <div class="col-12 col-md-5 text-center">
+                        <label for="nameinput" class="from-label"></label>
+                        <input type="text" class="from-control" id="ipy8b" required name="moviename" placeholder="输入电影名检索：" />
+                        <button type="submit">Search</button>
+                        <div id="icttl" class="c9343">{{Insert}}</div>
+                        <p class="mt-4"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <section class="footer-1">
+            <div class="container">
+                <div class="media-container-row align-center"><b class="c8796">所有数据来源于豆瓣，并且数据使用限于作业相关内容。</b>
+                    <div class="col-12">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
