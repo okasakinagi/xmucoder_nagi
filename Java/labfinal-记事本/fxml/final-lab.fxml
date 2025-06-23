@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="70.0" minWidth="100.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finallab.finalController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="15.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Label fx:id="label_place" prefHeight="26.0" prefWidth="82.0" text="Label">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+             <Label fx:id="label_count" prefHeight="26.0" prefWidth="82.0" text="Label">
+                 <padding>
+                     <Insets left="10.0" />
+                 </padding>
+             </Label>
+         </children>
+      </HBox>
+      <TextArea fx:id="Text" GridPane.rowIndex="1" />
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="文件">
+            <items>
+              <MenuItem fx:id="new_file" mnemonicParsing="false" onAction="#new_file_onaction" text="新建" />
+                <MenuItem fx:id="open_file" mnemonicParsing="false" onAction="#open_file_onaction" text="打开" />
+                <MenuItem fx:id="save_file" mnemonicParsing="false" onAction="#save_file_onaction" text="保存" />
+                <MenuItem fx:id="other_save_file" mnemonicParsing="false" onAction="#save_file_as_onaction" text="另存为" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="编辑">
+            <items>
+              <MenuItem fx:id="undo" accelerator="Ctrl+Z" mnemonicParsing="false" onAction="#undo_onaction" text="撤销" />
+                <MenuItem fx:id="redo" accelerator="Ctrl+Y" mnemonicParsing="false" onAction="#redo_onaction" text="重做" />
+                <MenuItem fx:id="cut" accelerator="Ctrl+X" mnemonicParsing="false" onAction="#cut_onaction" text="剪切" />
+                <MenuItem fx:id="copy" accelerator="Ctrl+C" mnemonicParsing="false" onAction="#copy_onaction" text="复制" />
+                <MenuItem fx:id="paste" accelerator="Ctrl+V" mnemonicParsing="false" onAction="#paste_onaction" text="粘贴" />
+                <MenuItem fx:id="selectall" accelerator="Ctrl+A" mnemonicParsing="false" onAction="#select_all_onaction" text="全选" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="查看">
+            <items>
+              <MenuItem fx:id="word_type" mnemonicParsing="false" onAction="#word_type_onaction" text="字体" />
+                <MenuItem fx:id="search" mnemonicParsing="false" onAction="#search_onaction" text="查找和替换" />
+                <MenuItem fx:id="auto_enter" mnemonicParsing="false" onAction="#auto_enter_onaction" text="自动换行" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+                <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about_onaction" text="关于" />
+                </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</GridPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lab132.BallController">
+   <children>
+      <Label fx:id="label" layoutY="-3.0" prefHeight="34.0" prefWidth="220.0" text="点击下方可以生成运动的球">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutY="0.0" onMouseClicked="#OnMouseClicked_Pane" prefHeight="400.0" prefWidth="600.0" style="-fx-border-style: dashed;" />
+   </children>
+</AnchorPane>

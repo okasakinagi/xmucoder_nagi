@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finallab.HelpViewController">
+   <children>
+      <Label layoutX="27.0" layoutY="14.0" text="作者：谭霁恒">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="44.0" text="版本：1.0.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="68.0" prefHeight="85.0" prefWidth="246.0" text="说明：这是完成Java课程作业，是对于Windows记事本的模仿，并非长期维护项目。" wrapText="true">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

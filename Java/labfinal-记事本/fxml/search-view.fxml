@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finallab.SearchViewController">
+   <children>
+      <TextField fx:id="searchField" layoutX="27.0" layoutY="25.0" promptText="输入查找的内容" />
+      <TextField fx:id="replaceField" layoutX="27.0" layoutY="110.0" promptText="输入替换的内容" />
+      <Button fx:id="search_next_Button" layoutX="206.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchNext" text="查找下一个" />
+      <Button fx:id="search_prev_Button" layoutX="206.0" layoutY="48.0" mnemonicParsing="false" onAction="#searchPrev" text="查找上一个" />
+      <Button fx:id="replace_one_Button" layoutX="212.0" layoutY="88.0" mnemonicParsing="false" onAction="#replaceOne" text="替换一处" />
+      <Button fx:id="replace_all_Button" layoutX="212.0" layoutY="122.0" mnemonicParsing="false" onAction="#replaceAll" text="替换全部" />
+      <Label layoutX="27.0" layoutY="7.0" text="查找" />
+      <Label layoutX="27.0" layoutY="92.0" text="替换" />
+      <Label fx:id="result_label" layoutX="24.0" layoutY="163.0" prefHeight="23.0" prefWidth="252.0" />
+      <CheckBox fx:id="cycle" layoutX="16.0" layoutY="63.0" mnemonicParsing="false" onAction="#cycle_onaction" text="循环查询" />
+      <CheckBox fx:id="case_sensitive" layoutX="103.0" layoutY="63.0" mnemonicParsing="false" onAction="#case_sensitive_onaction" text="区分大小写" />
+   </children>
+</AnchorPane>

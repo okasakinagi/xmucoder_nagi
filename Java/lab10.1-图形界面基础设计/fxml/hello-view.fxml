@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="319.0" prefWidth="453.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab101.HelloController">
+   <children>
+      <HBox prefHeight="48.0" prefWidth="307.0">
+         <children>
+            <VBox prefHeight="48.0" prefWidth="81.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="High" />
+                  <RadioButton mnemonicParsing="false" text="Medium" />
+                  <RadioButton mnemonicParsing="false" text="Low" />
+               </children>
+            </VBox>
+            <VBox prefHeight="48.0" prefWidth="107.0">
+               <children>
+                  <TextField promptText="Your name" />
+                  <PasswordField promptText="Your password" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="48.0" prefWidth="159.0">
+               <children>
+                  <MenuButton layoutX="7.0" layoutY="17.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="86.0" text="Enilish">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Chinese" />
+                      <MenuItem mnemonicParsing="false" text="Other" />
+                    </items>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="28.0" prefWidth="307.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0" text="Accept" />
+            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="69.0" text="Decline">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+            <Label prefHeight="37.0" prefWidth="123.0" style="-fx-border-style: dashed; -fx-border-width: 1px; -fx-border-color: gray;" text="Not Available" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="36.0" prefWidth="307.0">
+         <children>
+            <CheckBox mnemonicParsing="false" prefHeight="28.0" prefWidth="80.0" text="Normal" />
+            <VBox prefHeight="31.0" prefWidth="0.0" style="-fx-border-style: dashed; -fx-border-width: 1px; -fx-border-color: gray;" />
+            <CheckBox mnemonicParsing="false" prefHeight="28.0" prefWidth="80.0" text="Checked">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></CheckBox>
+            <CheckBox mnemonicParsing="false" prefHeight="28.0" prefWidth="96.0" text="Undefined" />
+         </children>
+      </HBox>
+      <HBox prefHeight="134.0" prefWidth="443.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="77.0" style="-fx-border-style: dashed; -fx-border-width: 1px; -fx-border-color: gray;" text="Progress:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Slider prefHeight="32.0" prefWidth="124.0" />
+            <ProgressIndicator progress="0.0">
+               <HBox.margin>
+                  <Insets left="3.0" top="2.0" />
+               </HBox.margin>
+            </ProgressIndicator>
+         </children></HBox>
+   </children>
+   <padding>
+      <Insets left="10.0" top="20.0" />
+   </padding>
+</VBox>

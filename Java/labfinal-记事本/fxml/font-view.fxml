@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root_pane" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finallab.FontViewController">
+   <children>
+      <Button fx:id="ack_button" layoutX="339.0" layoutY="41.0" mnemonicParsing="false" onAction="#onAckButtonClicked" text="确认" AnchorPane.topAnchor="41.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="84.0" layoutY="4.0" text="字体">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="45.0" text="大小">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="font_choice" layoutX="75.0" layoutY="23.0" prefWidth="150.0" />
+      <Slider fx:id="size_choice" layoutX="80.0" layoutY="65.0" max="50.0" min="1.0" />
+      <Label fx:id="size_label" layoutX="225.0" layoutY="62.0" text="1px">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="text_area" editable="false" layoutX="14.0" layoutY="100.0" prefHeight="92.0" prefWidth="372.0" text="这是字体的测试内容" />
+   </children>
+</AnchorPane>

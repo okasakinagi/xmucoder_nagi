@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root_pane" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finallab.SaveAckViewController">
+   <children>
+      <Button fx:id="First" layoutX="32.0" layoutY="95.0" mnemonicParsing="false" onAction="#First_onaction" text="保存" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="Second" layoutX="117.0" layoutY="95.0" mnemonicParsing="false" onAction="#Second_onaction" text="另存为" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="117.66666666666667">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="Third" layoutX="207.0" layoutY="95.0" mnemonicParsing="false" onAction="#Third_onaction" text="取消" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="Text" layoutX="27.0" layoutY="43.0" prefHeight="20.0" prefWidth="246.0" text="你的文件尚未保存，是否确认退出" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
