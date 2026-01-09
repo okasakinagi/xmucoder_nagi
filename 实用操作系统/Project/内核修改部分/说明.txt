@@ -1,0 +1,7 @@
+这三个是源码修改后的文件
+路径是
+arch/x86/entry/syscalls/syscall_64.tbl
+include/linux/syscalls.h
+kernel/sys.c
+注意，操作系统内核版本是6.14.0-37-generic，其他版本内核直接复制覆盖文件可能不能正常编译
+增加系统调用步骤，下载源码，修改代码，编译内核，修改启动内核，测试即可
